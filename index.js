@@ -95,11 +95,14 @@ Promise.all([getNumbers, getLetters]).then(result => {
 })
 
 // Now we try the same process using async await javascript.
+// The keyword await before a function makes the function wait for a promise.
+// The keyword async is placed in the parent function.
+// it tells the browser it is an asyncronous function.
 
 const displayData = async () => {
   const data = await fetchData()
   let parsedOutput =
-  `Parsed the data from async await: id: ${data.id} with message: ${data.message}`
+    `Parsed the data from async await: id: ${data.id} with message: ${data.message}`
   document.querySelector('.output').innerHTML = parsedOutput
 }
 
